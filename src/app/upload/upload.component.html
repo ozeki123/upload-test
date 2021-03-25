@@ -1,0 +1,5 @@
+<mat-label>File</mat-label>
+<button mat-raised-button (click)="fileInput.click()">
+  {{ file ? file.name : 'Select' }}
+</button>
+<input hidden type="file" #fileInput (change)="onFileInput(fileInput.files)" />
